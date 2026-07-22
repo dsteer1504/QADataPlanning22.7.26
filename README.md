@@ -1,0 +1,1 @@
+# QADataPlanning22.7.26
