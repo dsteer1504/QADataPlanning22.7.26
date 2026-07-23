@@ -1,0 +1,130 @@
+<mxfile host="app.diagrams.net" agent="Claude">
+  <diagram name="Online Shopping ERD" id="erd-online-shopping">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="customers" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;align=center;" value="Customers" vertex="1">
+          <mxGeometry height="160" width="220" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_pk" parent="customers" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;  CustomerID" vertex="1">
+          <mxGeometry height="26" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_fn" parent="customers" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="FirstName" vertex="1">
+          <mxGeometry height="26" width="220" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_ln" parent="customers" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="LastName" vertex="1">
+          <mxGeometry height="26" width="220" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_email" parent="customers" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="Email" vertex="1">
+          <mxGeometry height="26" width="220" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="cust_phone" parent="customers" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="Phone" vertex="1">
+          <mxGeometry height="26" width="220" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="addresses" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;fontStyle=1;align=center;" value="Customer_Addresses" vertex="1">
+          <mxGeometry height="212" width="220" x="40" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="addr_pk" parent="addresses" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;  AddressID" vertex="1">
+          <mxGeometry height="26" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="addr_fk_cust" parent="addresses" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;i&gt;FK&lt;/i&gt;  CustomerID" vertex="1">
+          <mxGeometry height="26" width="220" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="addr_line1" parent="addresses" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="Line1" vertex="1">
+          <mxGeometry height="26" width="220" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="addr_city" parent="addresses" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="City" vertex="1">
+          <mxGeometry height="26" width="220" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="addr_postcode" parent="addresses" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="PostCode" vertex="1">
+          <mxGeometry height="26" width="220" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="addr_country" parent="addresses" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="Country" vertex="1">
+          <mxGeometry height="26" width="220" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="addr_type" parent="addresses" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="AddressType" vertex="1">
+          <mxGeometry height="26" width="220" y="186" as="geometry" />
+        </mxCell>
+        <mxCell id="orders" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;align=center;" value="Orders" vertex="1">
+          <mxGeometry height="160" width="220" x="400" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_pk" parent="orders" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;  OrderID" vertex="1">
+          <mxGeometry height="26" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_fk_cust" parent="orders" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;i&gt;FK&lt;/i&gt;  CustomerID" vertex="1">
+          <mxGeometry height="26" width="220" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_date" parent="orders" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="OrderDate" vertex="1">
+          <mxGeometry height="26" width="220" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_fk_ship" parent="orders" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;i&gt;FK&lt;/i&gt;  ShippingAddressID" vertex="1">
+          <mxGeometry height="26" width="220" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="ord_fk_bill" parent="orders" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;i&gt;FK&lt;/i&gt;  BillingAddressID" vertex="1">
+          <mxGeometry height="26" width="220" y="134" as="geometry" />
+        </mxCell>
+        <mxCell id="order_items" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;fontStyle=1;align=center;" value="Order_Items" vertex="1">
+          <mxGeometry height="134" width="220" x="720" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="oi_pk1" parent="order_items" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;b&gt;PK,FK&lt;/b&gt;  OrderID" vertex="1">
+          <mxGeometry height="26" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="oi_pk2" parent="order_items" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;b&gt;PK,FK&lt;/b&gt;  ProductID" vertex="1">
+          <mxGeometry height="26" width="220" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="oi_qty" parent="order_items" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="Quantity" vertex="1">
+          <mxGeometry height="26" width="220" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="oi_price" parent="order_items" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="UnitPriceAtSale" vertex="1">
+          <mxGeometry height="26" width="220" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="products" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;fontStyle=1;align=center;" value="Products" vertex="1">
+          <mxGeometry height="134" width="220" x="1040" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="prod_pk" parent="products" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;  ProductID" vertex="1">
+          <mxGeometry height="26" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="prod_name" parent="products" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="ProductName" vertex="1">
+          <mxGeometry height="26" width="220" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="prod_fk_cat" parent="products" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;i&gt;FK&lt;/i&gt;  CategoryID" vertex="1">
+          <mxGeometry height="26" width="220" y="82" as="geometry" />
+        </mxCell>
+        <mxCell id="prod_price" parent="products" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="Price" vertex="1">
+          <mxGeometry height="26" width="220" y="108" as="geometry" />
+        </mxCell>
+        <mxCell id="categories" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=13;fontStyle=1;align=center;" value="Categories" vertex="1">
+          <mxGeometry height="82" width="220" x="1040" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="cat_pk" parent="categories" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="&lt;b&gt;PK&lt;/b&gt;  CategoryID" vertex="1">
+          <mxGeometry height="26" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cat_name" parent="categories" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=8;fontSize=12;" value="CategoryName" vertex="1">
+          <mxGeometry height="26" width="220" y="56" as="geometry" />
+        </mxCell>
+        <mxCell id="rel1" edge="1" parent="1" source="customers" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;endArrow=ERmany;startArrow=ERone;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="addresses" value="has">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel2" edge="1" parent="1" source="customers" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;endArrow=ERmany;startArrow=ERone;rounded=0;exitX=1;exitY=0.3;exitDx=0;exitDy=0;entryX=0;entryY=0.2;entryDx=0;entryDy=0;" target="orders" value="places">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel3" edge="1" parent="1" source="addresses" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;endArrow=ERmany;startArrow=ERone;rounded=0;exitX=1;exitY=0.55;exitDx=0;exitDy=0;entryX=0;entryY=0.55;entryDx=0;entryDy=0;" target="orders" value="ships to">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel4" edge="1" parent="1" source="addresses" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;endArrow=ERmany;startArrow=ERone;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="orders" value="bills to">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel5" edge="1" parent="1" source="orders" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;endArrow=ERmany;startArrow=ERone;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="order_items" value="contains">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel6" edge="1" parent="1" source="products" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;endArrow=ERmany;startArrow=ERone;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="order_items" value="ordered in">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rel7" edge="1" parent="1" source="categories" style="edgeStyle=entityRelationEdgeStyle;fontSize=11;html=1;endArrow=ERmany;startArrow=ERone;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="products" value="classifies">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
